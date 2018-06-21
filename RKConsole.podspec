@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "RKConsole"
   s.version      = "1.0"
-  s.summary      = "一款可以在app展示控制台的log的插件,并且可以展示最后一次崩溃的日志(由WQConsole修改而来) 目前提供Object-C 版本"
+  s.summary      = "日志控件"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  一款可以在app展示控制台的log的插件,并且可以展示最后一次崩溃的日志(由WQConsole修改而来) 目前只提供Object-C 版本.
                    DESC
 
   s.homepage     = "https://github.com/kaenstc/RKConsole"
@@ -38,8 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,8 +79,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kaenstc/RKConsole.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/kaenstc/RKConsole.git", :tag => s.version.to_s }
 
+  s.ios.deployment_target = '8.0'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "RKConsole", "RKConsoleDemo/RKConsole/*.{h,m}"
+  s.source_files  = "RKConsoleDemo/RKConsole/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
