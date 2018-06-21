@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RKConsole"
-  s.version      = "0.0.1"
-  s.summary      = "一款可以在app展示控制台的log的插件,并且可以展示最后一次崩溃的日志(由WQConsole修改而来)"
+  s.version      = "1.0"
+  s.summary      = "一款可以在app展示控制台的log的插件,并且可以展示最后一次崩溃的日志(由WQConsole修改而来) 目前提供Object-C 版本"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "kaenstc" => "email@address.com" }
+  s.author             = { "kaenstc" => "254526100@qq.com" }
   # Or just: s.author    = "kaenstc"
   # s.authors            = { "kaenstc" => "email@address.com" }
   # s.social_media_url   = "http://twitter.com/kaenstc"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kaenstc/RKConsole.git", :commit => "3b220f0ae10ce9e68020c2f2ad5b055514579916" }
+  s.source       = { :git => "https://github.com/kaenstc/RKConsole.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "RKConsole", "RKConsoleDemo/RKConsole/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "Foundation", "UIKit"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
